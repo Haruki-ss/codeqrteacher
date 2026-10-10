@@ -360,7 +360,7 @@ select{font:inherit;color:var(--ink);background:var(--panel);border:1px solid va
     var name=c.name.replace(/[^\w\- ]+/g,"").trim()||"class";
     try{
       var dl=window.claude&&await claude.use("downloads");
-      if(!dl){$("attNote").innerHTML='<div class="msg err">Saving files isn\'t available in this view. Open the page from your claude.ai artifact link and try again.</div>';return;}
+      if(!dl){$("attNote").innerHTML='<div class="msg err">NOT WORKING YET</div>';return;}
       await dl.save({filename:name+" attendance.xlsx",data:new Blob([buf])});
     }catch(err){if(!err||err.code!=="declined")$("attNote").innerHTML='<div class="msg err">Couldn\'t save the file. Try again.</div>';}
   };
